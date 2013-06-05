@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package com.semanticintelligence.app.dao;
+
+import com.semanticintelligence.app.domain.$domain;
+
+
+/**
+ * @author dinesh.bhavsar
+ *
+ */
+public interface $class {
+
+	public $domain save($domain obj);
+
+	public $domain merge($domain obj);
+
+	public void delete($domain obj);
+	
+}

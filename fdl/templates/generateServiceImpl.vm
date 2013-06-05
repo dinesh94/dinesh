@@ -1,0 +1,47 @@
+/**
+ * 
+ */
+package com.semanticintelligence.app.service;
+
+import javax.annotation.Resource;
+import org.springframework.stereotype.Service;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import com.semanticintelligence.app.dao.$dao;
+import com.semanticintelligence.app.domain.$domain;
+
+/**
+ * @author dinesh.bhavsar
+ *
+ */
+@Service
+public class $class implements $interface {
+
+	protected final Log logger = LogFactory.getLog(getClass());
+
+	@Resource
+	private $dao objDao;
+	
+	/**
+	 * dinesh.bhavsar
+	 */
+	public $domain save($domain objPersist){
+		return objDao.save(objPersist);
+	}
+	
+	/**
+	 * dinesh.bhavsar
+	 */
+	public void delete($domain objRemove){
+		objDao.delete(objRemove);
+	}
+	
+	/**
+	 * dinesh.bhavsar
+	 */
+	public $domain merge($domain toMerge){
+		return objDao.merge(toMerge);
+	}
+}

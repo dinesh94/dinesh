@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       http://www.springframework.org/schema/aop 
+       http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+	   http://www.springframework.org/schema/tx
+	   http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+	   http://www.springframework.org/schema/context
+	   http://www.springframework.org/schema/context/spring-context-3.1.xsd
+	   http://www.springframework.org/schema/jee
+	   http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+	   http://www.springframework.org/schema/lang
+       http://www.springframework.org/schema/lang/spring-lang-3.1.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security-3.1.xsd
+       http://www.directwebremoting.org/schema/spring-dwr
+       http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd">
+
+
+	<context:annotation-config />
+	<mvc:annotation-driven />
+	<aop:aspectj-autoproxy />
+
+	<bean
+		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+
+	<!-- COMPONENT-SCAN -->
+
+	<context:component-scan base-package="com.semanticintelligence.*.controller">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+	<context:component-scan base-package="com.semanticintelligence.fidelity.controller">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+	<context:component-scan base-package="com.semanticintelligence.*.web.controller">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+	<context:component-scan base-package="com.semanticintelligence.*.service">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Service" />
+	</context:component-scan>
+
+	<context:component-scan base-package="com.semanticintelligence.*.dao">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Repository" />
+	</context:component-scan>
+
+	<!-- <context:component-scan base-package="com.semanticintelligence.app.aop" ></context:component-scan> -->
+	
+	<!-- RESOURCE BUNDLE -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>errors</value>
+				<value>messages</value>
+				<value>config</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- <context:component-scan base-package="com.semanticintelligence.app.aop"></context:component-scan> -->
+
+	<!-- <aop:config> <aop:aspect ref="profilingAspect"> <aop:pointcut id="theExecutionOfSomeFooServiceMethod" 
+		expression="execution(* com.semanticintelligence.app.dao.*.*(..))"/> <aop:around 
+		pointcut-ref="theExecutionOfSomeFooServiceMethod" method="doProfile"/> </aop:aspect> 
+		</aop:config> -->
+
+	<!-- VIEW RESOLVER -->
+	<bean id="resourceViewResolver"
+		class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+		<property name="basename" value="views" />
+		<property name="order" value="1" />
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/jsp/app</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+		<property name="order">
+			<value>2</value>
+		</property>
+	</bean>
+
+	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/> 
+		<property name="suffix" value=".jsp"/> <property name="order" value="2" /> 
+		</bean> -->
+
+	<!-- <bean id="xmlViewResolver" class="org.springframework.web.servlet.view.XmlViewResolver"> 
+		<property name="order" value="2" /> </bean> -->
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="mail.creditpointe.com" />
+		<property name="username" value="deloitte.exceptions@creditpointe.com" />
+		<property name="password" value="credit_1" />
+		<property name="port" value="587" />
+		<!--<property name="port" value="25" /> -->
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.host">mail.creditpointe.com</prop>
+				<prop key="mail.smtp.port">587</prop>
+				<!--<prop key="mail.smtp.port">25</prop> -->
+				<prop key="mail.transport.protocol">smtp</prop>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.smtp.ssl.trust">mail.creditpointe.com</prop>
+				<prop key="mail.smtp.from">deloitte.exceptions@creditpointe.com</prop>
+				<prop key="mail.debug">true</prop>
+				<prop key="mail.username">deloitte.exceptions@creditpointe.com</prop>
+				<prop key="mail.password">credit_1</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</bean>
+
+
+	<bean class="com.semanticintelligence.app.util.ExceptionResolver">
+		<property name="defaultErrorView" value="error-page" />
+	</bean>
+
+	<mvc:interceptors>
+		<bean name="loginInterceptor" class="com.semanticintelligence.app.util.LoginInterceptor"></bean>
+	</mvc:interceptors>
+
+	<mvc:resources mapping="/accessdenied.htm" location="/accessdenied.htm" />
+	<mvc:resources mapping="/css/**" location="/css/" />
+	<mvc:resources mapping="/js/**" location="/js/" />
+	<mvc:resources mapping="/js/Multiselect/**" location="/js/Multiselect/" />
+	<mvc:resources mapping="/onto/**" location="/onto/" />
+	<mvc:resources mapping="/tabs/**" location="/tabs/" />
+	<mvc:resources mapping="/images/**" location="/images/" />
+	<mvc:resources mapping="/dwr/**" location="/dwr/" />
+	<mvc:resources mapping="/ext-3.3.1/**" location="/ext-3.3.1/" />
+	<mvc:resources mapping="graphs/**" location="/graphs/" />
+	<mvc:resources mapping="graphs/amline/**" location="/graphs/amline/" />
+	<mvc:resources mapping="/d3js/**" location="/d3js/" />
+
+</beans>

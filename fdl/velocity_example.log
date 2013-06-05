@@ -1,0 +1,76 @@
+2013-05-24 11:43:42,516 - Log4JLogChute initialized using file 'velocity_example.log'
+2013-05-24 11:43:42,516 - Starting Apache Velocity v1.6.2 (compiled: 2009-02-19 16:29:46)
+2013-05-24 11:43:42,516 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2013-05-24 11:43:42,516 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-05-24 11:43:42,516 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2013-05-24 11:43:42,516 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-05-24 11:43:42,516 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-05-24 11:43:42,516 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:43:42,516 - Do unicode file recognition:  false
+2013-05-24 11:43:42,516 - FileResourceLoader : adding path '.'
+2013-05-24 11:43:42,548 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2013-05-24 11:43:42,548 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2013-05-24 11:43:42,548 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2013-05-24 11:43:42,548 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2013-05-24 11:43:42,548 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-05-24 11:43:42,548 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-05-24 11:43:42,548 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-05-24 11:43:42,548 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-05-24 11:43:42,548 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-05-24 11:43:42,579 - Created '20' parsers.
+2013-05-24 11:43:42,579 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-05-24 11:43:42,579 - Velocimacro : Default library not found.
+2013-05-24 11:43:42,579 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-05-24 11:43:42,579 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-05-24 11:43:42,579 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-05-24 11:43:42,579 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-05-24 11:43:42,626 - ResourceManager : found ./templates/generateDAO.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:43:42,657 - ResourceManager : found ./templates/generateDAOImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:43:42,657 - ResourceManager : found ./templates/generateService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:43:42,736 - ResourceManager : found ./templates/generateServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,569 - Log4JLogChute initialized using file 'velocity_example.log'
+2013-05-24 11:47:37,569 - Starting Apache Velocity v1.6.2 (compiled: 2009-02-19 16:29:46)
+2013-05-24 11:47:37,569 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2013-05-24 11:47:37,569 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-05-24 11:47:37,569 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2013-05-24 11:47:37,569 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-05-24 11:47:37,569 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-05-24 11:47:37,569 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,569 - Do unicode file recognition:  false
+2013-05-24 11:47:37,569 - FileResourceLoader : adding path '.'
+2013-05-24 11:47:37,585 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2013-05-24 11:47:37,585 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2013-05-24 11:47:37,585 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2013-05-24 11:47:37,585 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2013-05-24 11:47:37,585 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-05-24 11:47:37,585 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-05-24 11:47:37,585 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-05-24 11:47:37,585 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-05-24 11:47:37,585 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-05-24 11:47:37,600 - Created '20' parsers.
+2013-05-24 11:47:37,616 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-05-24 11:47:37,616 - Velocimacro : Default library not found.
+2013-05-24 11:47:37,616 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-05-24 11:47:37,616 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-05-24 11:47:37,616 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-05-24 11:47:37,616 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-05-24 11:47:37,631 - ResourceManager : found ./templates/generateDAO.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,647 - ResourceManager : found ./templates/generateDAOImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,663 - ResourceManager : found ./templates/generateService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,678 - ResourceManager : found ./templates/generateServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,694 - ResourceManager : found ./templates/generateDAO.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,694 - ResourceManager : found ./templates/generateDAOImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,694 - ResourceManager : found ./templates/generateService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,709 - ResourceManager : found ./templates/generateServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,709 - ResourceManager : found ./templates/generateDAO.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,709 - ResourceManager : found ./templates/generateDAOImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,725 - ResourceManager : found ./templates/generateService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,725 - ResourceManager : found ./templates/generateServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,741 - ResourceManager : found ./templates/generateDAO.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,741 - ResourceManager : found ./templates/generateDAOImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,756 - ResourceManager : found ./templates/generateService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,787 - ResourceManager : found ./templates/generateServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,787 - ResourceManager : found ./templates/generateDAO.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,803 - ResourceManager : found ./templates/generateDAOImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,819 - ResourceManager : found ./templates/generateService.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-05-24 11:47:37,819 - ResourceManager : found ./templates/generateServiceImpl.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
